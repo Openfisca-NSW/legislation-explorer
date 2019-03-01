@@ -62,8 +62,8 @@ class App extends React.Component {
             <div className="row">
               <div className="col-md-3 openfiscaPresentation">
                 <img
-                  alt="OpenFisca"
-                  src="https://openfisca.org/img/logo-openfisca.svg"
+                  alt="{countryName}"
+                  src="https://upload.wikimedia.org/wikipedia/en/thumb/c/cf/New_South_Wales_Government_logo.svg/280px-New_South_Wales_Government_logo.svg.png"
                 />
                 <code id="country-package-info">
                   {countryPackageName}@{countryPackageVersion}
