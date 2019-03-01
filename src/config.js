@@ -1,11 +1,11 @@
 let config = new Object(null)
 
-config.apiBaseUrl = process.env.API_URL || 'https://openfisca-nsw-staging.herokuapp.com'
+config.apiBaseUrl = process.env.API_URL || 'http://0.0.0.0:5000'
 config.changelogUrl = process.env.CHANGELOG_URL
 
 config.pathname = process.env.PATHNAME || '/'
-config.host = process.env.HOST || 'nsw-rules.herokuapp.com'
-config.port = parseInt(process.env.PORT) || 80
+config.host = process.env.HOST || '0.0.0.0'
+config.port = parseInt(process.env.PORT) || 2020
 
 if (process.env.MATOMO_CONFIG) {
   config.matomo = JSON.parse(process.env.MATOMO_CONFIG)
@@ -17,7 +17,7 @@ if (process.env.MATOMO_CONFIG) {
   }
 }
 
-config.ui = JSON.parse(process.env.UI_STRINGS || '{"en":{"countryName":"the development environment"}}')
+config.ui = JSON.parse(process.env.UI_STRINGS || '{"en":{"countryName":"the development environment"},"fr":{"countryName":"l’environnement de développement"}}')
 
 
 export default config
